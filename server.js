@@ -2,8 +2,8 @@ var express= require("express")
 var errorHandler= require("express-error-middleware")
 var app=express()
 
-app.use('/timestamp', express.static(__dirname))
-app.get('/timestamp/:str',function(req,res){
+app.use(express.static(__dirname))
+app.get('/:str',function(req,res){
     var reqstr=req.params.str
     var isUnix= reqstr.search(/[a-z]|[A-Z]/)==-1?true:false
     
@@ -29,7 +29,7 @@ app.get('/timestamp/:str',function(req,res){
     res.end(JSON.stringify(jsonDates))
 })
 
-app.get('/timestamp/*', errorHandler.NotFoundMiddleware)
+app.get('*', errorHandler.NotFoundMiddleware)
 
 app.listen(8080,function(){
     console.log("listening on port 8080")
