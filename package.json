@@ -1,14 +1,25 @@
 {
   "name": "timestamp",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.14.0",
     "express-error-middleware": "^1.3.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Swoozeki/timestamp-microservice.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Swoozeki/timestamp-microservice/issues"
+  },
+  "homepage": "https://github.com/Swoozeki/timestamp-microservice#readme",
+  "description": ""
 }
