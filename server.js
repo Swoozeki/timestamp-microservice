@@ -2,7 +2,7 @@ var express= require("express")
 var errorHandler= require("express-error-middleware")
 var app=express()
 
-app.use('/timestamp'/express.static(__dirname))
+app.use('/timestamp',express.static(__dirname))
 app.get('/timestamp/:str',function(req,res){
     var reqstr=req.params.str
     var isUnix= reqstr.search(/[a-z]|[A-Z]/)==-1?true:false
